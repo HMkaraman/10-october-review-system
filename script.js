@@ -1,5 +1,5 @@
 // ===== إعدادات Google Sheets =====
-const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_SCRIPT_URL_HERE';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz1p11E9L3ojgy-uDRQ8Y9GYg4IUj1yUVJHlseA8bV5AAROYxcV26mJot0WeBW4z-w_Fg/exec';
 
 // ===== حالة التطبيق =====
 let currentLang = 'ar';
