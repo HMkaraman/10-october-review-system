@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#AFB28E">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>10 October - تقييم الخدمات</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <img src="assets/logo-icon.png" alt="10 October" class="logo-icon" onerror="this.style.display='none'">
+                <img src="assets/logo-full.png" alt="10 October" class="logo-full" onerror="this.style.display='none'">
+            </div>
+            <button class="lang-toggle" onclick="toggleLanguage()">
+                <span id="langText">English</span>
+            </button>
+        </header>
+
+        <!-- Progress Indicator -->
+        <div class="progress-container" id="progressContainer">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-labels">
+                <span class="progress-label active" data-step="1">
+                    <span class="step-dot">1</span>
+                    <span class="step-text" data-ar="القسم" data-en="Section">القسم</span>
+                </span>
+                <span class="progress-label" data-step="2">
+                    <span class="step-dot">2</span>
+                    <span class="step-text" data-ar="التقييم" data-en="Rating">التقييم</span>
+                </span>
+                <span class="progress-label" data-step="3">
+                    <span class="step-dot">3</span>
+                    <span class="step-text" data-ar="رأيك" data-en="Feedback">رأيك</span>
+                </span>
+                <span class="progress-label" data-step="4">
+                    <span class="step-dot">4</span>
+                    <span class="step-text" data-ar="البيانات" data-en="Info">البيانات</span>
+                </span>
+            </div>
+        </div>
+
+        <!-- Step 1: Select Section -->
+        <section class="step-content active" id="step1">
+            <div class="step-header">
+                <div class="step-icon">🏢</div>
+                <h2 data-ar="اختر القسم" data-en="Select Section">اختر القسم</h2>
+                <p data-ar="أي قسم قمت بزيارته اليوم؟" data-en="Which section did you visit today?">أي قسم قمت بزيارته اليوم؟</p>
+            </div>
+            <div class="section-cards">
+                <div class="section-card" data-section="salon">
+                    <div class="card-icon">💇‍♀️</div>
+                    <span class="section-name" data-ar="الصالون" data-en="Salon">الصالون</span>
+                    <span class="section-desc" data-ar="تصفيف وعناية بالشعر" data-en="Hair styling & care">تصفيف وعناية بالشعر</span>
+                </div>
+                <div class="section-card" data-section="clinic">
+                    <div class="card-icon">💉</div>
+                    <span class="section-name" data-ar="العيادة" data-en="Clinic">العيادة</span>
+                    <span class="section-desc" data-ar="علاجات تجميلية" data-en="Beauty treatments">علاجات تجميلية</span>
+                </div>
+                <div class="section-card" data-section="spa">
+                    <div class="card-icon">🧖‍♀️</div>
+                    <span class="section-name" data-ar="السبا" data-en="Spa">السبا</span>
+                    <span class="section-desc" data-ar="استرخاء ومساج" data-en="Relaxation & massage">استرخاء ومساج</span>
+                </div>
+                <div class="section-card" data-section="cafe">
+                    <div class="card-icon">☕</div>
+                    <span class="section-name" data-ar="المقهى" data-en="Café">المقهى</span>
+                    <span class="section-desc" data-ar="مشروبات ومأكولات" data-en="Drinks & food">مشروبات ومأكولات</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 2: Ratings -->
+        <section class="step-content" id="step2">
+            <div class="step-header">
+                <div class="step-icon">⭐</div>
+                <h2 data-ar="قيّم تجربتك" data-en="Rate Your Experience">قيّم تجربتك</h2>
+                <p data-ar="اضغط على النجوم لتقييم كل عنصر" data-en="Tap the stars to rate each aspect">اضغط على النجوم لتقييم كل عنصر</p>
+            </div>
+
+            <div class="rating-list">
+                <div class="rating-item" data-rating-type="service">
+                    <div class="rating-info">
+                        <span class="rating-icon">🎯</span>
+                        <div class="rating-text">
+                            <span class="rating-label" data-ar="جودة الخدمة" data-en="Service Quality">جودة الخدمة</span>
+                            <span class="rating-value" data-ar="اضغط للتقييم" data-en="Tap to rate">اضغط للتقييم</span>
+                        </div>
+                    </div>
+                    <div class="star-rating">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+                </div>
+
+                <div class="rating-item" data-rating-type="team">
+                    <div class="rating-info">
+                        <span class="rating-icon">👥</span>
+                        <div class="rating-text">
+                            <span class="rating-label" data-ar="تعامل الفريق" data-en="Team Service">تعامل الفريق</span>
+                            <span class="rating-value" data-ar="اضغط للتقييم" data-en="Tap to rate">اضغط للتقييم</span>
+                        </div>
+                    </div>
+                    <div class="star-rating">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+                </div>
+
+                <div class="rating-item" data-rating-type="place">
+                    <div class="rating-info">
+                        <span class="rating-icon">✨</span>
+                        <div class="rating-text">
+                            <span class="rating-label" data-ar="المكان والأجواء" data-en="Ambiance">المكان والأجواء</span>
+                            <span class="rating-value" data-ar="اضغط للتقييم" data-en="Tap to rate">اضغط للتقييم</span>
+                        </div>
+                    </div>
+                    <div class="star-rating">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+                </div>
+
+                <div class="rating-item" data-rating-type="cleanliness">
+                    <div class="rating-info">
+                        <span class="rating-icon">🧼</span>
+                        <div class="rating-text">
+                            <span class="rating-label" data-ar="النظافة" data-en="Cleanliness">النظافة</span>
+                            <span class="rating-value" data-ar="اضغط للتقييم" data-en="Tap to rate">اضغط للتقييم</span>
+                        </div>
+                    </div>
+                    <div class="star-rating">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="btn-back" onclick="prevStep()">
+                    <span class="btn-icon">→</span>
+                    <span data-ar="السابق" data-en="Back">السابق</span>
+                </button>
+                <button class="btn-next" onclick="nextStep()">
+                    <span data-ar="التالي" data-en="Next">التالي</span>
+                    <span class="btn-icon">←</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Step 3: Feedback -->
+        <section class="step-content" id="step3">
+            <div class="step-header">
+                <div class="step-icon">💬</div>
+                <h2 data-ar="شاركنا رأيك" data-en="Your Feedback">شاركنا رأيك</h2>
+                <p data-ar="رأيك يهمنا ويساعدنا على التطوير" data-en="Your opinion helps us improve">رأيك يهمنا ويساعدنا على التطوير</p>
+            </div>
+
+            <div class="feedback-list">
+                <div class="feedback-item">
+                    <div class="feedback-header">
+                        <span class="feedback-icon">💚</span>
+                        <label data-ar="ما الذي أعجبك؟" data-en="What did you like?">ما الذي أعجبك؟</label>
+                    </div>
+                    <textarea id="likes" rows="3"
+                        data-placeholder-ar="أخبرنا عن الأشياء الجيدة في تجربتك..."
+                        data-placeholder-en="Tell us about the good things..."
+                        placeholder="أخبرنا عن الأشياء الجيدة في تجربتك..."></textarea>
+                </div>
+
+                <div class="feedback-item">
+                    <div class="feedback-header">
+                        <span class="feedback-icon">💡</span>
+                        <label data-ar="اقتراحات للتحسين" data-en="Improvement Ideas">اقتراحات للتحسين</label>
+                    </div>
+                    <textarea id="suggestions" rows="3"
+                        data-placeholder-ar="كيف يمكننا أن نكون أفضل؟"
+                        data-placeholder-en="How can we be better?"
+                        placeholder="كيف يمكننا أن نكون أفضل؟"></textarea>
+                </div>
+
+                <div class="feedback-item complaint">
+                    <div class="feedback-header">
+                        <span class="feedback-icon">⚠️</span>
+                        <label data-ar="شكوى (اختياري)" data-en="Complaint (optional)">شكوى (اختياري)</label>
+                    </div>
+                    <textarea id="complaint" rows="3"
+                        data-placeholder-ar="إذا واجهت مشكلة، أخبرنا لنتمكن من حلها..."
+                        data-placeholder-en="If you faced any issue, let us know..."
+                        placeholder="إذا واجهت مشكلة، أخبرنا لنتمكن من حلها..."></textarea>
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="btn-back" onclick="prevStep()">
+                    <span class="btn-icon">→</span>
+                    <span data-ar="السابق" data-en="Back">السابق</span>
+                </button>
+                <button class="btn-next" onclick="nextStep()">
+                    <span data-ar="التالي" data-en="Next">التالي</span>
+                    <span class="btn-icon">←</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Step 4: Contact Info -->
+        <section class="step-content" id="step4">
+            <div class="step-header">
+                <div class="step-icon">🎁</div>
+                <h2 data-ar="احصل على هديتك!" data-en="Get Your Gift!">احصل على هديتك!</h2>
+                <p data-ar="أدخل بياناتك للحصول على خصم 5%" data-en="Enter your info to get 5% discount">أدخل بياناتك للحصول على خصم 5%</p>
+            </div>
+
+            <div class="contact-form">
+                <div class="gift-banner">
+                    <div class="gift-content">
+                        <span class="gift-emoji">🎁</span>
+                        <div class="gift-text">
+                            <strong data-ar="خصم 5%" data-en="5% OFF">خصم 5%</strong>
+                            <span data-ar="على زيارتك القادمة" data-en="on your next visit">على زيارتك القادمة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label data-ar="الاسم الكريم" data-en="Your Name">الاسم الكريم</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon">👤</span>
+                        <input type="text" id="customerName" required
+                            data-placeholder-ar="أدخل اسمك"
+                            data-placeholder-en="Enter your name"
+                            placeholder="أدخل اسمك"
+                            autocomplete="name">
+                    </div>
+                    <span class="error-msg" id="nameError" data-ar="الرجاء إدخال الاسم" data-en="Please enter your name">الرجاء إدخال الاسم</span>
+                </div>
+
+                <div class="form-group">
+                    <label data-ar="رقم الهاتف" data-en="Phone Number">رقم الهاتف</label>
+                    <div class="input-wrapper phone-input">
+                        <span class="input-icon">📱</span>
+                        <span class="phone-prefix">+964</span>
+                        <input type="tel" id="customerPhone" required
+                            data-placeholder-ar="7xxxxxxxxx"
+                            data-placeholder-en="7xxxxxxxxx"
+                            placeholder="7xxxxxxxxx"
+                            autocomplete="tel"
+                            inputmode="numeric"
+                            maxlength="11">
+                    </div>
+                    <span class="error-msg" id="phoneError" data-ar="الرجاء إدخال رقم هاتف صحيح" data-en="Please enter a valid phone">الرجاء إدخال رقم هاتف صحيح</span>
+                    <span class="input-hint" data-ar="مثال: 7701234567" data-en="Example: 7701234567">مثال: 7701234567</span>
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="btn-back" onclick="prevStep()">
+                    <span class="btn-icon">→</span>
+                    <span data-ar="السابق" data-en="Back">السابق</span>
+                </button>
+                <button class="btn-submit" id="submitBtn" onclick="submitForm()">
+                    <span data-ar="إرسال واستلام الخصم" data-en="Submit & Get Discount">إرسال واستلام الخصم</span>
+                    <span class="btn-icon">🎁</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Success Screen -->
+        <section class="step-content success-screen" id="successScreen">
+            <div class="success-content">
+                <div class="success-animation">
+                    <div class="success-circle">
+                        <span class="checkmark">✓</span>
+                    </div>
+                    <div class="confetti"></div>
+                </div>
+
+                <h2 data-ar="شكراً لك!" data-en="Thank You!">شكراً لك!</h2>
+                <p class="success-subtitle" data-ar="تقييمك يساعدنا على تقديم الأفضل دائماً" data-en="Your feedback helps us serve you better">تقييمك يساعدنا على تقديم الأفضل دائماً</p>
+
+                <div class="discount-card">
+                    <div class="discount-badge">
+                        <span data-ar="هديتك" data-en="Your Gift">هديتك</span>
+                    </div>
+                    <div class="discount-amount">5%</div>
+                    <p class="discount-desc" data-ar="خصم على زيارتك القادمة" data-en="Discount on your next visit">خصم على زيارتك القادمة</p>
+
+                    <div class="discount-code-container">
+                        <span class="code-label" data-ar="كود الخصم" data-en="Discount Code">كود الخصم</span>
+                        <div class="code-box">
+                            <span id="discountCode">OCT5-XXXX</span>
+                            <button class="copy-btn" onclick="copyCode()" title="نسخ">
+                                <span id="copyIcon">📋</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="discount-instructions">
+                        <span class="instruction-icon">📱</span>
+                        <span data-ar="أظهر هذه الشاشة للكاشير" data-en="Show this screen to cashier">أظهر هذه الشاشة للكاشير</span>
+                    </div>
+                </div>
+
+                <button class="btn-reset" onclick="resetForm()">
+                    <span data-ar="تقييم جديد" data-en="New Review">تقييم جديد</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer" id="footer">
+            <img src="assets/logo-full.png" alt="10 October" class="footer-logo" onerror="this.style.display='none'">
+            <p data-ar="شكراً لزيارتكم" data-en="Thank you for visiting">شكراً لزيارتكم</p>
+        </footer>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
